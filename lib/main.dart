@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:wellbeingfrontend/components/bottomNavbar.dart';
 import 'package:wellbeingfrontend/pages/reportPage.dart';
 
 void main() {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ReportPage(),
+      home: bottomNavBar(),
+      
     );
   }
 }
