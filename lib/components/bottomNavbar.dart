@@ -1,6 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:wellbeingfrontend/pages/homepage.dart';
+import 'package:wellbeingfrontend/pages/profile.dart';
+import 'package:wellbeingfrontend/pages/reportPage.dart';
+import 'package:wellbeingfrontend/pages/settings.dart';
 
 class bottomNavBar extends StatefulWidget {
   const bottomNavBar({super.key});
@@ -19,17 +23,21 @@ class _bottomNavBarState extends State<bottomNavBar> {
       selectedIndex=index;
     });
   }
+  final List<Widget> pages=[
+    HomePage(),
+    ReportPage(),
+    ProfilePage(),
+    SettingsPage(),
+   
+    
+  
+  ];
 
   @override
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      body: Center(
-        child:Text("Hello",
-        style: TextStyle(fontSize:50)
-        
-        ),
-    ),
+      body: pages[selectedIndex],
      bottomNavigationBar: BottomNavigationBar(
       currentIndex: selectedIndex,
       onTap: navigateBottomBar,
