@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:wellbeingfrontend/pages/homepage.dart';
 import 'package:wellbeingfrontend/pages/profile.dart';
-import 'package:wellbeingfrontend/pages/reportPage.dart';
+import 'package:wellbeingfrontend/report%20/reportPage.dart';
 import 'package:wellbeingfrontend/pages/settings.dart';
 
 class bottomNavBar extends StatefulWidget {
