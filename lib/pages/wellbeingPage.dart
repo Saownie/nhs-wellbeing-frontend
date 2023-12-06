@@ -39,6 +39,7 @@ class WellbeingPage extends StatelessWidget {
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               const Text(
                 'Wellbeing Categories',
@@ -62,7 +63,10 @@ class WellbeingPage extends StatelessWidget {
                                           .categoryRoute));
                         },
                         child: Container(
-                          child: Text(wellbeingCategories[index].categoryName),
+                          child: Text(
+                            textAlign: TextAlign.left,
+                            wellbeingCategories[index].categoryName,
+                          ),
                           padding: EdgeInsets.all(10.0),
                         ));
                   },
