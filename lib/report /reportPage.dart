@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:wellbeingfrontend/report%20/anonincidenttype.dart';
 import 'package:wellbeingfrontend/report%20/incidenttype.dart';
 
 class ReportPage extends StatefulWidget {
@@ -21,10 +22,22 @@ class _ReportPageState extends State<ReportPage> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
-              'Reporting Bullying + Harassment',
+              'Reporting Bullying + Harassment Support',
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               textAlign: TextAlign.center,
             ),
+            SizedBox(height: 15),
+            Text('At St Georges University Hospital,we take bullying and harrassment very seriously. We have a zero tolerance policy towards bullying and harrassment. We encourage you to report any incidents of bullying & harrassment that you have experienced or witnessed.',
+            style: TextStyle(fontSize: 15),
+            textAlign: TextAlign.justify,
+            ),
+            SizedBox(height: 15),
+            Text(
+              'If you choose to report anonymously, we do not ask for your personal information and the result of the case will be published in our website. Otherwise, you will receive email about the investigation outcome. Please use the buttons below to report.',
+            style: TextStyle(fontSize: 15),
+            textAlign: TextAlign.justify,
+            ),
+
             Align(
               alignment: Alignment.bottomCenter,
               child: Column(
@@ -46,7 +59,11 @@ class _ReportPageState extends State<ReportPage> {
                     style: ButtonStyle(minimumSize: MaterialStateProperty.all(Size(double.infinity, 50))), // this makes the button full width
                     child: Text("Report anonymously"),
                     onPressed: (){
-                      // Add your onPressed code here
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => AnonIncidentType (),
+                        ),
+                      );
                     },
                   ),
                 ],
