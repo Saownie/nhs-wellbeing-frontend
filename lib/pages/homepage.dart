@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:wellbeingfrontend/model.dart';
+import 'package:wellbeingfrontend/models/homeModel.dart';
+import 'package:wellbeingfrontend/pages/wellbeingItem.dart';
+import 'package:wellbeingfrontend/pages/wellbeingPage.dart';
 import 'package:wellbeingfrontend/report%20/reportPage.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -143,109 +145,122 @@ class _HomeScreenState extends State<HomeScreen> {
                       SizedBox(
                         height: height * 0.02,
                       ),
-                      SizedBox(
-                        width: width,
-                        height: height * 0.16,
-                        //  color: Colors.amber,
-                        child: Row(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              Container(
-                                  width: width * 0.23,
-                                  height: height * 0.12,
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(5),
-                                    image: const DecorationImage(
-                                      image: AssetImage(
-                                          "images/e73d11c1c2bd8ddb6aac7e10c6a0cd80.png"),
-                                      fit: BoxFit.cover,
-                                    ),
-                                  )),
-                              //  color: Colors.blueAccent,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WellbeingItem()),
+                          );
+                        },
+                        child: SizedBox(
+                          width: width,
+                          height: height * 0.16,
+                          //  color: Colors.amber,
+                          child: Row(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                    width: width * 0.23,
+                                    height: height * 0.12,
+                                    decoration: BoxDecoration(
+                                      borderRadius: BorderRadius.circular(5),
+                                      image: const DecorationImage(
+                                        image: AssetImage(
+                                            "images/e73d11c1c2bd8ddb6aac7e10c6a0cd80.png"),
+                                        fit: BoxFit.cover,
+                                      ),
+                                    )),
+                                //  color: Colors.blueAccent,
 
-                              SizedBox(
-                                width: width * 0.03,
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text("Tips to reduce stress",
-                                      style: TextStyle(
-                                        color: const Color(0xff005EB8),
-                                        fontSize: width * 0.04,
-                                        fontWeight: FontWeight.w500,
-                                      )),
-                                  Row(
-                                    children: [
-                                      Container(
-                                        //    width: width * 0.12,
-                                        decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.1),
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(4)),
-                                        ),
+                                SizedBox(
+                                  width: width * 0.03,
+                                ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text("Tips to reduce stress",
+                                        style: TextStyle(
+                                          color: const Color(0xff005EB8),
+                                          fontSize: width * 0.04,
+                                          fontWeight: FontWeight.w500,
+                                        )),
+                                    Row(
+                                      children: [
+                                        Container(
+                                          //    width: width * 0.12,
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Colors.black.withOpacity(0.1),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.circular(4)),
+                                          ),
 
-                                        child: Center(
-                                          child: Text(
-                                            ' Health ',
-                                            style: TextStyle(
-                                                fontSize: width * 0.03,
-                                                fontWeight: FontWeight.w400),
+                                          child: Center(
+                                            child: Text(
+                                              ' Health ',
+                                              style: TextStyle(
+                                                  fontSize: width * 0.03,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                      SizedBox(
-                                        width: width * 0.03,
-                                      ),
-                                      Container(
-                                        //    width: width * 0.12,
-                                        decoration: BoxDecoration(
-                                          color: Colors.black.withOpacity(0.1),
-                                          borderRadius: const BorderRadius.all(
-                                              Radius.circular(4)),
+                                        SizedBox(
+                                          width: width * 0.03,
                                         ),
-                                        child: Center(
-                                          child: Text(
-                                            ' Stress management ',
-                                            style: TextStyle(
-                                                fontSize: width * 0.03,
-                                                fontWeight: FontWeight.w400),
+                                        Container(
+                                          //    width: width * 0.12,
+                                          decoration: BoxDecoration(
+                                            color:
+                                                Colors.black.withOpacity(0.1),
+                                            borderRadius:
+                                                const BorderRadius.all(
+                                                    Radius.circular(4)),
+                                          ),
+                                          child: Center(
+                                            child: Text(
+                                              ' Stress management ',
+                                              style: TextStyle(
+                                                  fontSize: width * 0.03,
+                                                  fontWeight: FontWeight.w400),
+                                            ),
                                           ),
                                         ),
-                                      ),
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    width: width * 0.6,
-                                    child: Text(
-                                      "Tips and tricks for maintaining a healthy lifestyle",
-                                      style: TextStyle(
-                                          fontSize: width * 0.03,
-                                          fontWeight: FontWeight.w400),
+                                      ],
                                     ),
-                                  ),
-                                  Row(
-                                    children: [
-                                      CircleAvatar(
-                                        radius: width * 0.03,
-                                        backgroundImage: const AssetImage(
-                                          'images/c8c6574047e3b599a252a04b03b94fd7.png', // Replace with your image URL
-                                        ),
-                                      ),
-                                      SizedBox(width: width * 0.015),
-                                      Text(
-                                        'Health Expert',
+                                    SizedBox(
+                                      width: width * 0.6,
+                                      child: Text(
+                                        "Tips and tricks for maintaining a healthy lifestyle",
                                         style: TextStyle(
                                             fontSize: width * 0.03,
-                                            fontWeight: FontWeight.w500),
+                                            fontWeight: FontWeight.w400),
                                       ),
-                                    ],
-                                  ),
-                                ],
-                              )
-                            ]),
+                                    ),
+                                    Row(
+                                      children: [
+                                        CircleAvatar(
+                                          radius: width * 0.03,
+                                          backgroundImage: const AssetImage(
+                                            'images/c8c6574047e3b599a252a04b03b94fd7.png', // Replace with your image URL
+                                          ),
+                                        ),
+                                        SizedBox(width: width * 0.015),
+                                        Text(
+                                          'Health Expert',
+                                          style: TextStyle(
+                                              fontSize: width * 0.03,
+                                              fontWeight: FontWeight.w500),
+                                        ),
+                                      ],
+                                    ),
+                                  ],
+                                )
+                              ]),
+                        ),
                       ),
                       SizedBox(
                         height: height * 0.01,
@@ -255,7 +270,13 @@ class _HomeScreenState extends State<HomeScreen> {
                         height: height * 0.02,
                       ),
                       ApptextButton(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WellbeingPage()),
+                          );
+                        },
                         text: "Health & Wellbeing",
                         bgcolor: const Color(0xff005EB8),
                         txtcolor: Colors.white,
