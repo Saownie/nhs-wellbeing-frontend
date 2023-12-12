@@ -20,20 +20,33 @@ class WellbeingPage extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          const Card(
-            child: Expanded(
-              child: Column(
-                children: [
-                  Text(
-                    'Staff Support Service line (you do not need managers referral to access this support):',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  Text(
-                    '020 8725 3368/4749',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                    selectionColor: Color(0x005EB8),
-                  )
-                ],
+          Card(
+            color: Colors.white,
+            child: Container(
+              padding: EdgeInsets.only(
+                  left: 15.0, top: 15.0, right: 10, bottom: 10.0),
+              child: Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text.rich(TextSpan(
+                        text: 'Staff Support Service line ',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        children: [
+                          TextSpan(
+                              text:
+                                  '(you do not need managers referral to access this support):',
+                              style: TextStyle(fontWeight: FontWeight.normal)),
+                        ])),
+                    Text(
+                      '020 8725 3368/4749',
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.blue.shade800),
+                    )
+                  ],
+                ),
               ),
             ),
           ),
@@ -41,12 +54,13 @@ class WellbeingPage extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              const Text(
-                'Wellbeing Categories',
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
-              ),
-              const SizedBox(
-                height: 10,
+              Container(
+                padding:
+                    EdgeInsets.only(left: 10, top: 10, right: 7, bottom: 10),
+                child: Text(
+                  'Wellbeing Categories',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
               Container(
                 height: 200,

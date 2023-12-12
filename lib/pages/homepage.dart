@@ -328,9 +328,9 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                         },
                         text: "Report Bullying and Harassment",
-                        bgcolor: Colors.black.withOpacity(0.05),
-                        txtcolor: Colors.black,
-                        bordercolor: Colors.grey,
+                        bgcolor: Colors.white,
+                        txtcolor: Colors.blue.shade800.withOpacity(1),
+                        bordercolor: Colors.blue.shade800.withOpacity(0.7),
                       ),
                       SizedBox(
                         height: height * 0.15,
