@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wellbeingfrontend/components/bottomNavbar.dart';
+import 'package:wellbeingfrontend/pages/homepage.dart';
 import 'package:wellbeingfrontend/report /stepperbar.dart';
 class ConfirmationPage extends StatefulWidget {
   const ConfirmationPage({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class _ConfirmationPageState extends State<ConfirmationPage> {
   void _goToHomePage() {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => bottomNavBar()));
+      MaterialPageRoute(builder: (context) => HomeScreen()));
     
   }
 
